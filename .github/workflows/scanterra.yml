@@ -2,11 +2,11 @@ name: Scan sécurité Terraform
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     paths:
       - 'terraform/**'
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
     paths:
       - 'terraform/**'
 
