@@ -1,16 +1,14 @@
 name: Mise à jour Ubuntu
 
 on:
-  push:
-    branches: [ main, dev ]
+  workflow_dispatch:
 
 jobs:
   update-system:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mettre à jour la liste des paquets
-        run: sudo apt update
-
-      - name: Mettre à niveau les paquets installés
-        run: sudo apt upgrade -y
+      - name: Mettre à jour et upgrader le système
+        run: |
+          sudo apt update
+          sudo apt upgrade -y
